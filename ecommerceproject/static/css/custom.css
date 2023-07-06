@@ -20,14 +20,21 @@ body{
         text-transform: uppercase;
 
 }
+
+
+
 .my_footer{
     background-color: hwb(0 29% 33%);
     height: 40px;
-    margin-top: 20px;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 
 .my_footer p{
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 18px;
 
 }
@@ -39,11 +46,22 @@ body{
 .my_row_class .mx_auto{
     color: black;
     font-size: 12px;
+ 
+}
+
+.mx_auto2{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
 }
 
 .my_image{
-    width: 100%;
-    height: auto;
+    width: 100px;
+    height: 200px;
+}
+.my_image2{
+    width: "100%";
+    height: "100%";
 }
 
 .my_title{
@@ -53,7 +71,7 @@ body{
 }
 
 .my_image .my_image_padding{
-    padding: 5px;
+    padding: 10Apx;
 }
 
 .my_bottom_margin{
@@ -78,6 +96,7 @@ body{
                 color:navajowhite;
                 font-size:12px;
                 text-decoration: none;
+               
 }
 .my_prod_title{
     font-size: 26px;
