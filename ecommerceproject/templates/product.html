@@ -1,36 +1,41 @@
 {% extends 'base.html' %}
-{% load static %} 
-{% block metadescription %} 
+{% load static %}
+{% block metadescription %}
 
-                {{ product.description }}
+{{ product.description }}
 
-{% endblock %} 
+{% endblock %}
 {% block title %}
-    {% if category %}
-        {{product.name}} - ABC store
+{% if category %}
+{{product.name}} - ABC store
 
-        {% endif %} 
-      {% endblock %}   
-        
+{% endif %}
+{% endblock %}
+
 
 {% block content %}
-            <div class="row my_prod_row_class">
-                <div class="mx-auto">
-                    <p><a href="{% url 'shopapp:allProdCat' %}">Home</a>|<a href="{{product.category.get_url}}">{{product.category}}</a>|{{product.name}}</p>
-                    
-                </div>
-            </div>
-            <div class="container">
-            <br>
-           <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
-                <div>
-                <div style="min-width: 18rem;">
+<div class="prod_main">
+    <div class="mx-auto">
+        <p><a href="{% url 'shopapp:allProdCat' %}">Home</a>|<a
+                href="{{product.category.get_url}}">{{product.category}}</a>|{{product.name}}</p>
+    </div>
+
+    <!-- <div> -->
+        <img class="prod_image" src="{{product.image.url}}" alt="{{product.name}}">
+    <!-- </div> -->
+
+
+    <!-- <div class="container"> -->
+
+    <!-- <div class="row"> -->
+    <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center"> -->
+    <!-- <div> -->
+    <!-- <div style="min-width: 18rem;">
                     <img src="{{product.image.url}}" alt="{{product.name}}">
-                </div>
-            </div>
-        </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 prod_bottom">
                     <h2 class="my_prod_title">{{product.name}}</h2>
                     <p>${{product.price}}</p>
                     <p class="my_title"> Product Description </p> 
@@ -40,10 +45,6 @@
                     {% else %}
                         <a class="btn btn-secondary" href="{% url 'cart:add_cart' product.id %}">Add to cart</a><br>
                 </div>
-            </div>
-                {% endif %} 
-                {% endblock %}  
-
-              
-            
-
+</div>
+{% endif %}
+{% endblock %}
