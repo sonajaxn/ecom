@@ -19,6 +19,13 @@
         <p><a href="{% url 'shopapp:allProdCat' %}">Home</a>|<a
                 href="{{product.category.get_url}}">{{product.category}}</a>|{{product.name}}</p>
     </div>
+    <style>
+        .prod_image{
+    width:200px;
+    height:200px;
+}
+
+    </style>
     
     <div class="prod_inner">
         <img class="prod_image" src="{{product.image.url}}" alt="{{product.name}}">
