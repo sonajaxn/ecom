@@ -27,8 +27,14 @@
     </div>
     {% endif %} 
     <div class="mx-auto">
+        <style>
+            .cat{
+                width: 1100;
+                height: 320;
+            }
+        </style>
         {% if category %} 
-        <img  src="{{category.image.url}}" alt="{{category.name}}">
+        <img  src="{{category.image.url}}" alt="{{category.name}}" class="cat">
     </div>
         <br>
         <div>
